@@ -39,7 +39,7 @@ body {
     }
 
     input[value="Create Login"]{
-    margin-left: 80px;
+    margin-left: 100px;
     }
     
     input[type="submit"]:hover {
