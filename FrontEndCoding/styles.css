@@ -37,6 +37,10 @@ body {
     border-radius: 5px;
     cursor: pointer;
     }
+
+    input[value="Create Login"]{
+    margin-left: 80px;
+    }
     
     input[type="submit"]:hover {
     background-color: #45a049;
