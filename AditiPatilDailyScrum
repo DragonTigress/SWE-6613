@@ -7,30 +7,56 @@ This is a log of the daily scrum needed for Sprint 1.
 - Do you see any impediment that prevents you or the Development Team from meeting the Sprint Goal? What are the impediments? What is your impediment removal plan?
 **************************************************************************************************************************************************************************************
 1/31/24
-Our team had meeting and discussed about the project
-Discussed about the roles in the group project
+- Our team had meeting and discussed about the project
+- Discussed about the roles in the group project
 
 2/5/24
--We had team meeting to discuss about the project and providing the roles to everyone
--I am working as Project Manager and Developer for our project
--Researched about the requirements of the project
--Researched about Scrum, sprint and jira tool 
--Create github account 
+- We had team meeting to discuss about the project and providing the roles to everyone
+- I am working as Project Manager and Developer for our project
+- Researched about the requirements of the project
+- Researched about Scrum, sprint and jira tool 
+- Create github account 
 
 2/6/24
--Created a jira board software to start and manage our project
--Created project Online Gaming Matchmaking in jira board
--Added team members to jira board
--Created few stories in jira  
+- Created a jira board software to start and manage our project
+- Created project Online Gaming Matchmaking in jira board
+- Added team members to jira board
+- Created few stories in jira  
 
 2/7/24
--Participated in team meeting
--researched about the requirements of the project
--Research which backend coding language and which database to use in the project
+- Participated in team meeting
+- researched about the requirements of the project
+- Research which backend coding language and which database to use in the project
 
 2/12/24
--Discussed and finalized about the fields which we will use in the registration and login API, with team members
--Completed the story which was assigned to me
--Created new stories in the jira board
--Adding comments on the stories to the Jira board
+- Discussed and finalized about the fields which we will use in the registration and login API, with team members
+- Completed the story which was assigned to me
+- Created new stories in the jira board
+- Adding comments on the stories to the Jira board
 
+2/14/24
+- worked on my story of backend development of registration API and Login API
+- No impediments 
+
+2/18/24
+- commented on the stories in Jira board
+- I tried to push the back end code of Registration API and Login API in GitHub
+- accidently we lost some files from main branch 
+- but we could recover them because we had backup of those files
+- Impediments are there because we lost some files when pushing the backend code in the GitHub, But we couls recover it
+
+2/19/24
+- Gave updates to team members that I am done with the backend development story
+- Created a thread in our teams group to discuss about which stories are done and which are in-progress 
+- We discueed in teams about our in-progress stories and planned to cmplete them soon
+- Created a thread "Project deliverables 1" in our teams chat and posted points of all pendinge work and done work in that thread, so that we will not miss any deliverables points
+- we discussed on all the pending work for the deliverable
+- No impediments 
+
+2/20/24
+- We scheduled sprint review meeting in the evening
+- I configured burndown chart in our jira board
+- I configured story points field in jira board
+- working on unit test cases for the backend code
+- No Impediments
+- Due date of deliverable 1
