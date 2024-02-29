@@ -42,3 +42,12 @@ This is a log of the daily scrum needed for Sprint 1.
 -Worked on video for front end development and had sprint review meeting
 -Will start working for next sprint on coding
 -Impediments were not being able to get front end code to connect to back end. 
+
+
+*********************************************************************************************************************************************
+Scrums for Sprint 2
+
+2/28/24
+-Working on event handling for when someone enters text in the fields, to show errors when they don't match a pattern
+-Haven't got the code to work, still working on event handling
+-None so far
