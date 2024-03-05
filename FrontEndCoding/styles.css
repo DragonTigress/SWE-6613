@@ -78,3 +78,13 @@ button {
     justify-content: center; 
     align-items: center; 
 }
+
+.requirement-list li.valid i {
+    font-size: 1.2rem;
+    color: #4285F4;
+}
+
+.requirement-list li.valid span {
+    font-size: 1.2rem;
+    color: #999;
+}

@@ -6,13 +6,15 @@
 </head>
 <body>
     <h1>Welcome to the Login Page</h1>
-    <form action="login.php" method="POST">
+    <form action="/FrontEndCoding/login.html" method="post">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br>
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required><br>
-    <input type="submit" value="Login">
-    <input type="submit" value="Create Login">
+    <button class="btn" id="loginBtn">Login</button>
+    <a href="/FrontEndCoding/index.html">
+        <button type="button" class="btn" id="registerBtn">Sign Up</button>
+    </a>
     </form>
 </body>
-</html>
+</html> 

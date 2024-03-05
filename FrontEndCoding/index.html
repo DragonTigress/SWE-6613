@@ -3,19 +3,19 @@
 <html> 
   
 <head> 
-    <title>Registration Form</title> 
-    <link rel="stylesheet" 
-          href="styles.css"> 
+       <title>Registration Form</title> 
+       <link rel="stylesheet" href="styles.css"> 
+       <script src="script.js" defer></script>
 </head> 
   
 <body> 
     <div class="main"> 
         <h1>Online Game Matchmaking</h1> 
-        <form action=""> 
-            <label for="first">First Name:</label> 
-            <input type="text" id="first" 
+        <form action="/FrontEndCoding/index.html" id="sign-up"> 
+              <label for="first">First Name:</label> 
+              <input type="text" id="first" 
                    name="first" 
-                   placeholder="Enter your first name" required> 
+                   placeholder="Enter your first name" required>
   
             <label for="last">Last Name:</label> 
             <input type="text" id="last" 
@@ -31,16 +31,36 @@
             <input type="date" 
                    id="dob" name="dob" 
                    placeholder="Enter your DOB" required> 
-  
-            <label for="password">Password:</label> 
-            <input type="password" id="password" 
-                   name="password"
-                   placeholder="Enter your password"
-                   pattern= 
-                   "^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" required                    
-                   title="Password must contain at least one number,  
-                       one alphabet, one symbol, and be at  
-                       least 8 characters long"> 
+              <div class="pass-field">
+                     <label for="password">Password:</label> 
+                     <input type="password" id="password" name="password" placeholder="Create your password">
+                     <i class="fa-solid fa-eye"></i> 
+              </div>
+              <div class="content">
+                     <p>Password must contain:</p>
+                     <ul class="requirement-list">
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 8 characters long</span>
+                            </li>
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 1 number</span>
+                            </li>
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 1 lowercase letter</span>
+                            </li>
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 1 special symbol</span>
+                            </li>
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 1 uppercase letter</span>
+                            </li>
+                     </ul>
+              </div>
   
             <label for="repassword">Re-type Password:</label> 
             <input type="password" id="repassword" 
@@ -68,8 +88,8 @@
                   
             </div> 
         </form> 
-    </div> 
-    <script src="script.js"></script> 
+    </div>
+    <script type="text/javascript" src="script.js"></script> 
 </body> 
   
 </html> 
