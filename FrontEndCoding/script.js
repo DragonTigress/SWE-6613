@@ -1,8 +1,17 @@
 //.pass-field is the class name for the password input
-const passwordInput = document.querySelector(".pass-field input")
+const passwordInput = document.querySelector(".pass-field input");
 //i is what is after the < just like the input above
-const eyeIcon = document.querySelector(".pass-field i")
-const requirementsList = document.querySelectorAll(".requirement-list li")
+const eyeIcon = document.querySelector(".pass-field i");
+const requirementsList = document.querySelectorAll(".requirement-list li");
+//.confirm-pass is the class name for the confirm password input
+const confirmPasswordInput = document.querySelector(".confirm-pass input");
+//.email-field is the class name for email input
+const emailInput = document.querySelector(".email-field input");
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//.phone-field is the class name for phone input 
+const phoneInput = document.querySelector(".phone-field input");
+const phoneRegex = /^[0-9]{10}$/;
+
 
 const requirements = [
     {regex: /.{8,}/, index: 0}, // Minimum 8 characters long
@@ -34,59 +43,37 @@ eyeIcon.addEventListener("click", () => {
     //Update the eye icon class based on the password input type
     eyeIcon.className = `fa-solid fa-eye${passwordInput.type === "password" ? "" : "-slash"}`;
 })
-  
-// function solve() { 
-//     let password =  
-//         document.getElementById('password').value; 
-//     let repassword =  
-//         document.getElementById('repassword').value; 
-//     let mobile =  
-//         document.getElementById('mobile').value; 
-//     let mail = 
-//         document.getElementById('email').value; 
-//     let flag = 1; 
-    
-//     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
-  
-//     if (!emailRegex.test(mail)) { 
-//         flag = 0; 
-//         pass.innerText =  
-//             'Please enter a valid email address.'; 
-//         setTimeout(() => { 
-//             pass.innerText = ""; 
-//         }, 3000); 
-//     } 
-  
-//     if (password !== repassword) { 
-//         flag = 0; 
-//         pass.innerText = 
-//             "Passwords do not match. Please re-enter."; 
-//         setTimeout(() => { 
-//             pass.innerText = ""; 
-//         }, 3000); 
-//     } 
-  
-//     let passwordRegex =  
-//         /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$/; 
-  
-//     if (!passwordRegex.test(password)) { 
-//         flag = 0; 
-//         pass.innerText = 
-//             'Password must be at least 8 characters'+ 
-//             ' long and include at least one number,'+ 
-//             ' one alphabet, and one symbol.'; 
-//         setTimeout(() => { 
-//             pass.innerText = ""; 
-//         }, 3000); 
-//     } 
-//     let mobileRegex =  /^[0-9]{10}$/;
-//     if(!mobileRegex.test(mobile)) {
-//         flag=0;
-//         pass.innerText = 'Please enter a valid number.';
-//         setTimeout(() => { 
-//             pass.innerText = ""; 
-//         }, 3000);   
-//     }   
-//     if (flag) 
-//         alert("Form submitted"); 
-// }
+
+// Check if the passwords match
+confirmPasswordInput.addEventListener("keyup", function() {
+
+    if((passwordInput.value != confirmPasswordInput.value) && (confirmPasswordInput.value != '')){
+        document.getElementById('error-msg').innerHTML='Passwords don\'t match, re-enter passwords';
+    } else {
+        document.getElementById('error-msg').innerHTML='';
+    }
+})
+
+// Check if the email matches regex pattern
+emailInput.addEventListener("keyup", function() {
+    const isValid = emailRegex.test(emailInput.value);
+
+    if(isValid){
+        document.getElementById('email-msg').innerHTML='';
+
+    } else {
+        document.getElementById('email-msg').innerHTML='Email not valid, enter a valid email';
+    }
+})
+
+// Check if the email matches regex pattern
+phoneInput.addEventListener("keyup", function() {
+    const isValid = phoneRegex.test(phoneInput.value);
+
+    if(isValid){
+        document.getElementById('phone-msg').innerHTML='';
+
+    } else {
+        document.getElementById('phone-msg').innerHTML='Phone number not valid, enter a valid phone number';
+    }
+})
