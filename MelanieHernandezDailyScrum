@@ -56,3 +56,8 @@ Scrums for Sprint 2
 -Troubles getting the JavaScript to receive inputs and output an error message
 -Working on getting the JavaScript to work with the html code
 -None so far
+
+3/4/24
+-Got password validation to work and linked external script to html code. 
+-Will work on getting the validation for email and not leaving the other fields blank
+-None so far
