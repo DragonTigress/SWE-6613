@@ -61,3 +61,8 @@ Scrums for Sprint 2
 -Got password validation to work and linked external script to html code. 
 -Will work on getting the validation for email and not leaving the other fields blank
 -None so far
+
+3/5/24
+-Added validation for the email, phone number and re-type password fields with error messages
+-Will work on calling API to add user information if it doesn't find a matching email address
+-None so far
