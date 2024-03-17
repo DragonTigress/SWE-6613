@@ -15,12 +15,12 @@ const nameRegex = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
 const firstNameInput = document.querySelector(".first-field input");
 const lastNameInput = document.querySelector(".last-field input");
 
-const isValidFirstName = "";
-const isValidLastName = "";
-const isValidPhone = "";
-const isValidEmail = "";
-const isValidPassword = "";
-const isValidConfirmPassword = "";
+var isValidFirstName;
+var isValidLastName;
+var isValidPhone;
+var isValidEmail;
+var isValidPassword;
+var isValidConfirmPassword;
 
 const submitBtn = document.getElementById("submit-btn")
 
@@ -32,6 +32,7 @@ const requirements = [
     {regex: /[^A-Za-z0-9]/, index: 3}, // At least one special character
     {regex: /[A-Z]/, index: 4}, //At least one uppercase letter
 ]
+
 passwordInput.addEventListener("keyup", (e) => {
     requirements.forEach(item => {
         // Check if the password matches the requirements regex
@@ -113,25 +114,120 @@ lastNameInput.addEventListener("keyup", function() {
 
     if(isValid){
         document.getElementById('last-msg').innerHTML='';
-        isValidLastName = lastNameInput;
+         isValidLastName = lastNameInput;
 
     } else {
         document.getElementById('last-msg').innerHTML='Your name doesn\'t match correct pattern, enter a valid name';
     }
 })
 
+// submitBtn.addEventListener('click', async _ => {
+//     try {
+//         const response = await fetch('http://localhost:8081/register?firstName=' + isValidFirstName + '&lastName=' + isValidLastName + '&contactNumber=' + isValidPhone + '&emailAddress=' + isValidEmail + '&password=' + isValidPassword + '&confirmPassword=' + isValidConfirmPassword, {
+//             method: "POST",
+//             mode: "no-cors",
+//             credentials: "include",
+//             headers: {
+//                 "Content-Type": "application/json; charset=ascii"
+//             }
+//     })
+//         console.log(response);
+//         console.log('Completed!', response);
+//     } catch (err) {
+//         console.error(`Error: ${err}`);
+//     }
+// })
+
 submitBtn.addEventListener('click', async _ => {
-    // e.preventdefault();
-    // var { isValidFirstName, isValidLastName, isValidPhone, isValidEmail, isValidPassword, isValidConfirmPassword} = this.state;
-    // callApi('http://localhost:8081/register?firstName=' + isValidFirstName + '&lastName=' + isValidLastName + '&contactNumber=' + isValidPhone + '&emailAddress=' + isValidEmail + '&password=' + isValidPassword + '&confirmPassword=' + isValidConfirmPassword, 'POST', {}.then(res => {
-    //     console.log(res);
-    // }))
     try {
-        const response = await fetch('http://localhost:8081/register?firstName=' + isValidFirstName + '&lastName=' + isValidLastName + '&contactNumber=' + isValidPhone + '&emailAddress=' + isValidEmail + '&password=' + isValidPassword + '&confirmPassword=' + isValidConfirmPassword, {
+            const response = await fetch("http://localhost:8081/register", {
             method: "POST",
-    })
-        console.log('Completed!', response);
+            mode: "no-cors",
+            credentials: "include",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json; charset=ascii"
+            },
+            body: JSON.stringify ({
+                firstName: firstNameInput,
+                lastName: lastNameInput,
+                contactNumber: phoneInput,
+                emailAddress: emailInput,
+                password: passwordInput,
+                confirmPassword: confirmPasswordInput
+            }),
+        })
+    const result = await response.json();
+    console.log("Success:", result);
     } catch (err) {
-        console.error(`Error: ${err}`);
+        console.error('Error:', err);
     }
 })
+
+// const sendHttpRequest = (method, mode, url, data) => {
+//     const promise = new Promise((resolve, reject) => {
+//       const xhr = new XMLHttpRequest();
+//       xhr.open(method, mode, url);
+  
+//       xhr.responseType = 'json';
+  
+//       if (data) {
+//         xhr.setRequestHeader('Content-Type', 'application/json');
+//       }
+  
+//       xhr.onload = () => {
+//         if (xhr.status >= 400) {
+//           reject(xhr.response);
+//         } else {
+//           resolve(xhr.response);
+//         }
+//       };
+  
+//       xhr.onerror = () => {
+//         reject('Something went wrong!');
+//       };
+  
+//       xhr.send(JSON.stringify(data));
+//     });
+//     return promise;
+//   };
+  
+//   const sendData = () => {
+//     sendHttpRequest('POST', "no-cors", 'http://localhost:8081/register', {
+//         firstName: isValidFirstName,
+//         lastName: isValidLastName,
+//         contactNumber: isValidPhone,
+//         emailAddress: isValidEmail,
+//         password: isValidPassword,
+//         confirmPassword: isValidConfirmPassword
+//     })
+//       .then(responseData => {
+//         console.log(responseData);
+//       })
+//       .catch(err => {
+//         console.log(err);
+//       });
+//   };
+  
+//   submitBtn.addEventListener('click', sendData())
+
+// let userData = {
+//     firstName: isValidFirstName,
+//     lastName: isValidLastName,
+//     contactNumber: isValidPhone,
+//     emailAddress: isValidEmail,
+//     password: isValidPassword,
+//     confirmPassword: isValidConfirmPassword
+// }
+
+// fetch("script.php", {
+//     "method": "POST",
+//     "headers": {
+//         "Content-Type": "application/json; charset=utf-8"
+//     },
+//     "body": JSON.stringify(userData)
+// }).then(function(response){
+//     return response.json();
+// }).then(function(data){
+//     console.log(data);
+// })
