@@ -11,6 +11,18 @@ const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 //.phone-field is the class name for phone input 
 const phoneInput = document.querySelector(".phone-field input");
 const phoneRegex = /^[0-9]{10}$/;
+const nameRegex = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+const firstNameInput = document.querySelector(".first-field input");
+const lastNameInput = document.querySelector(".last-field input");
+
+const isValidFirstName = "";
+const isValidLastName = "";
+const isValidPhone = "";
+const isValidEmail = "";
+const isValidPassword = "";
+const isValidConfirmPassword = "";
+
+const submitBtn = document.getElementById("submit-btn")
 
 
 const requirements = [
@@ -51,6 +63,8 @@ confirmPasswordInput.addEventListener("keyup", function() {
         document.getElementById('error-msg').innerHTML='Passwords don\'t match, re-enter passwords';
     } else {
         document.getElementById('error-msg').innerHTML='';
+        isValidPassword = passwordInput;
+        isValidConfirmPassword = confirmPasswordInput;
     }
 })
 
@@ -60,6 +74,7 @@ emailInput.addEventListener("keyup", function() {
 
     if(isValid){
         document.getElementById('email-msg').innerHTML='';
+        isValidEmail = emailInput;
 
     } else {
         document.getElementById('email-msg').innerHTML='Email not valid, enter a valid email';
@@ -72,8 +87,51 @@ phoneInput.addEventListener("keyup", function() {
 
     if(isValid){
         document.getElementById('phone-msg').innerHTML='';
+        isValidPhone = phoneInput;
 
     } else {
         document.getElementById('phone-msg').innerHTML='Phone number not valid, enter a valid phone number';
+    }
+})
+
+// Check if first name matches regex pattern
+firstNameInput.addEventListener("keyup", function() {
+    const isValid = nameRegex.test(firstNameInput.value);
+
+    if(isValid){
+        document.getElementById('first-msg').innerHTML='';
+        isValidFirstName = firstNameInput;
+
+    } else {
+        document.getElementById('first-msg').innerHTML='Your name doesn\'t match correct pattern, enter a valid name';
+    }
+})
+
+// Check if first name matches regex pattern
+lastNameInput.addEventListener("keyup", function() {
+    const isValid = nameRegex.test(lastNameInput.value);
+
+    if(isValid){
+        document.getElementById('last-msg').innerHTML='';
+        isValidLastName = lastNameInput;
+
+    } else {
+        document.getElementById('last-msg').innerHTML='Your name doesn\'t match correct pattern, enter a valid name';
+    }
+})
+
+submitBtn.addEventListener('click', async _ => {
+    // e.preventdefault();
+    // var { isValidFirstName, isValidLastName, isValidPhone, isValidEmail, isValidPassword, isValidConfirmPassword} = this.state;
+    // callApi('http://localhost:8081/register?firstName=' + isValidFirstName + '&lastName=' + isValidLastName + '&contactNumber=' + isValidPhone + '&emailAddress=' + isValidEmail + '&password=' + isValidPassword + '&confirmPassword=' + isValidConfirmPassword, 'POST', {}.then(res => {
+    //     console.log(res);
+    // }))
+    try {
+        const response = await fetch('http://localhost:8081/register?firstName=' + isValidFirstName + '&lastName=' + isValidLastName + '&contactNumber=' + isValidPhone + '&emailAddress=' + isValidEmail + '&password=' + isValidPassword + '&confirmPassword=' + isValidConfirmPassword, {
+            method: "POST",
+    })
+        console.log('Completed!', response);
+    } catch (err) {
+        console.error(`Error: ${err}`);
     }
 })
