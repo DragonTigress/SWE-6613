@@ -121,48 +121,53 @@ lastNameInput.addEventListener("keyup", function() {
     }
 })
 
-// submitBtn.addEventListener('click', async _ => {
-//     try {
-//         const response = await fetch('http://localhost:8081/register?firstName=' + isValidFirstName + '&lastName=' + isValidLastName + '&contactNumber=' + isValidPhone + '&emailAddress=' + isValidEmail + '&password=' + isValidPassword + '&confirmPassword=' + isValidConfirmPassword, {
-//             method: "POST",
-//             mode: "no-cors",
-//             credentials: "include",
-//             headers: {
-//                 "Content-Type": "application/json; charset=ascii"
-//             }
-//     })
-//         console.log(response);
-//         console.log('Completed!', response);
-//     } catch (err) {
-//         console.error(`Error: ${err}`);
-//     }
-// })
-
 submitBtn.addEventListener('click', async _ => {
     try {
-            const response = await fetch("http://localhost:8081/register", {
+        const response = await fetch('http://localhost:8081/register?firstName=' + encodeURI(firstNameInput.value) 
+        + '&lastName=' + encodeURI(lastNameInput.value) 
+        + '&contactNumber=' + encodeURI(phoneInput.value) 
+        + '&emailAddress=' + encodeURI(emailInput.value) 
+        + '&password=' + encodeURI(passwordInput.value) 
+        + '&confirmPassword=' + encodeURI(confirmPasswordInput.value), {
             method: "POST",
             mode: "no-cors",
             credentials: "include",
             headers: {
-                Accept: "application/json",
                 "Content-Type": "application/json; charset=ascii"
-            },
-            body: JSON.stringify ({
-                firstName: firstNameInput,
-                lastName: lastNameInput,
-                contactNumber: phoneInput,
-                emailAddress: emailInput,
-                password: passwordInput,
-                confirmPassword: confirmPasswordInput
-            }),
-        })
-    const result = await response.json();
-    console.log("Success:", result);
+            }
+    })
+        console.log(response);
+        console.log('Completed!', response);
     } catch (err) {
-        console.error('Error:', err);
+        console.error(`Error: ${err}`);
     }
 })
+
+// submitBtn.addEventListener('click', async _ => {
+//     try {
+//             const response = await fetch("http://localhost:8081/register", {
+//             method: "POST",
+//             mode: "no-cors",
+//             credentials: "include",
+//             headers: {
+//                 Accept: "application/json",
+//                 "Content-Type": "application/json; charset=ascii"
+//             },
+//             body: JSON.stringify ({
+//                 "firstName": firstNameInput,
+//                 "lastName": lastNameInput,
+//                 "contactNumber": phoneInput,
+//                 "emailAddress": emailInput,
+//                 "password": passwordInput,
+//                 "confirmPassword": confirmPasswordInput
+//             }),
+//         })
+//     const result = await response.json();
+//     console.log("Success:", result);
+//     } catch (err) {
+//         console.error('Error:', err);
+//     }
+// })
 
 // const sendHttpRequest = (method, mode, url, data) => {
 //     const promise = new Promise((resolve, reject) => {
