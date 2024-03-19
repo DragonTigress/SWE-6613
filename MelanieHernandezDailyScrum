@@ -66,3 +66,10 @@ Scrums for Sprint 2
 -Added validation for the email, phone number and re-type password fields with error messages
 -Will work on calling API to add user information if it doesn't find a matching email address
 -None so far
+
+3/16/24
+-Been working on the API calls since 3/5. I have added first name and last name regex patterns to make sure users input names correctly.
+Started on the API calls. It now gets to the email parameter with an error but goes through firstName, LastName and contactNumber before producing the error
+Also had to add backend database on my pc along with the spring boot to allow for the backend application to be running while trying the front end API call.
+-Continue to work on the API call so that I can add it to the other pages for those fields as well
+-Not being able to get the API call without the bugs. It still isn't putting the information in the backend but is almost there
