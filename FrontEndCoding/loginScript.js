@@ -6,7 +6,7 @@ const passwordInput = document.querySelector(".pass-field input");
 
 loginBtn.addEventListener('click', async _ => {
     try {
-        const response = await fetch('http://localhost:8081/login?=emailAddress' + encodeURI(emailInput.value) 
+        const response = await fetch('http://localhost:8081/login?emailAddress=' + encodeURI(emailInput.value) 
         + '&password=' + encodeURI(passwordInput.value), {
             method: "POST",
             mode: "no-cors",
@@ -16,6 +16,7 @@ loginBtn.addEventListener('click', async _ => {
             }
     });
         console.log('Completed!', response);
+        return response;
     } catch (err) {
         console.error(`Error: ${err}`);
     }
