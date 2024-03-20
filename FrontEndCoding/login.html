@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
     <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover"> 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Welcome to the Login Page</h1>
-    <form action="/FrontEndCoding/login.html" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br>
-    <button class="btn" id="loginBtn">Login</button>
-    <a href="/FrontEndCoding/index.html">
+    <form action="/FrontEndCoding/homepage.html" method="post">
+    <div class="email-field">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br>
+    </div>
+
+    <div class="pass-field">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+    </div>
+
+    <a href="/FrontEndCoding/homepage.html">
+        <button class="btn" id="login-btn">Login</button>
+    </a>
+
+    <a href="/FrontEndCoding/signUp.html">
         <button type="button" class="btn" id="registerBtn">Sign Up</button>
     </a>
     </form>
+    <script type="text/javascript" src="loginScript.js"></script> 
 </body>
 </html> 

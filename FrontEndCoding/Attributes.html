@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MatchMaking Attributes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <title>Matchmaking Attributes</title>
+  <header>
+     <body>
+        <h1> Preferences Attributes </h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+                
+        </ul>
+    <div class = "form-group">
+        <form>
+            <label for="timezone">Time Zone</label>
+            <select id="timezone">
+                <option value = "Timezone">Select Timezone</option>
+                <option value = "PST">PST</option>
+                <option value = "CST">CST</option>
+                <option value = "IST">IST</option>
+                <option value = "EST">EST</option>
+            </select>
+            <br><br>    
+            <label for="microphone">Microphone:</label>
+      <div>
+        <input type="radio" id="microphone-yes" name="microphone" value="yes">
+        <label for="microphone-yes">Yes</label>
+      </div>
+      <div>
+        <input type="radio" id="microphone-no" name="microphone" value="no">
+        <label for="microphone-no">No</label>
+      </div>
+      <br>
+
+      <label for="age-range">Age Range:</label>
+      <select id="age-range" name="age-range">
+        <option value="under-18">Under 18</option>
+        <option value="18-30">18-30</option>
+        <option value="31-45">31-45</option>
+        <option value="46-60">46-60</option>
+        <option value="above-60">Above 60</option>
+      </select><br>
+      <label>Gender:</label>
+      <div>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+      </div>
+      <div>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </div>
+      <div>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </div>
+      <br>
+      <label>Console Preferences:</label>
+      <div>
+        <input type="checkbox" id="ps4" name="console" value="ps4">
+        <label for="ps4">PS4</label>
+      </div>
+      <div>
+        <input type="checkbox" id="xbox" name="console" value="xbox">
+        <label for="xbox">Xbox</label>
+      </div>
+      <div>
+        <input type="checkbox" id="switch" name="console" value="switch">
+        <label for="switch">Nintendo Switch</label>
+      </div>
+      <div>
+        <input type="checkbox" id="pc" name="console" value="pc">
+        <label for="pc">PC</label>
+      </div>
+      <!-- Add more console options as needed -->
+    </div>
+    <br>
+    <button type = "submit" class="btn"> Submit
+
+    </button>
+  
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</header>
+ 
+</html>

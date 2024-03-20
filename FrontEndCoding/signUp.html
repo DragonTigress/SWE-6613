@@ -1,0 +1,90 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+       <meta charset="utf-8">
+       <title>Registration Form</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover"> 
+       <link rel="stylesheet" href="styles.css"> 
+       <script src="script.js" defer></script>
+</head> 
+  
+<body> 
+    <div class="main"> 
+        <h1>Online Game Matchmaking</h1> 
+        <form action="/FrontEndCoding/homepage.html" id="sign-up" method="post"> 
+              <div class="first-field">
+                     <label for="first">First Name:</label> 
+                     <input type="text" id="first" name="first" placeholder="Enter your first name" required>
+                     <div id="first-msg"></div>
+              </div>
+  
+              <div class="last-field">
+                     <label for="last">Last Name:</label> 
+                     <input type="text" id="last" name="last" placeholder="Enter your last name" required> 
+                     <div id="last-msg"></div>
+              </div>
+              
+              <div class="email-field">
+                     <label for="email">Email:</label> 
+                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                     <div id="email-msg"></div>
+              </div>
+  
+            <label for="dob">Date of Birth:</label> 
+            <input type="date" 
+                   id="dob" name="dob" 
+                   placeholder="Enter your DOB" required> 
+              <div class="pass-field">
+                     <label for="password">Password:</label> 
+                     <input type="password" id="password" name="password" placeholder="Create your password" required>
+                     <i class="fa-solid fa-eye"></i> 
+              </div>
+              <div class="content">
+                     <p>Password must contain:</p>
+                     <ul class="requirement-list">
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 8 characters long</span>
+                            </li>
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 1 number</span>
+                            </li>
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 1 lowercase letter</span>
+                            </li>
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 1 special symbol</span>
+                            </li>
+                            <li>
+                                   <i class="fa-solid fa-circle"></i>
+                                   <span>At least 1 uppercase letter</span>
+                            </li>
+                     </ul>
+              </div>
+              <div class="confirm-pass">
+                     <label for="password">Re-type Password:</label> 
+                     <input type="password" id="confirmPass" name="repassword" placeholder="Re-Enter your password" required> 
+                     <div id="error-msg"></div>
+              </div>
+              <div class="phone-field">
+                     <label for="mobile">Contact:</label> 
+                     <input type="text" id="mobile" name="mobile" placeholder="Enter your Phone Number" required maxlength="10">
+                     <div id="phone-msg"></div>
+              </div>
+
+            <div class="wrap">
+              <a href="/FrontEndCoding/homepage.html">
+                <button id="submit-btn" type="submit" >Submit</button>  
+              </a>
+            </div> 
+        </form> 
+    </div>
+    <script type="text/javascript" src="signUpScript.js"></script> 
+</body> 
+  
+</html> 
