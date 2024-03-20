@@ -6,6 +6,7 @@ This is a log of the daily scrum needed for Sprint 1.
 
 - Do you see any impediment that prevents you or the Development Team from meeting the Sprint Goal? What are the impediments? What is your impediment removal plan?
 **************************************************************************************************************************************************************************************
+Scrum for sprint 1
 1/31/24
 - Our team had meeting and discussed about the project
 - Discussed about the roles in the group project
@@ -60,3 +61,51 @@ This is a log of the daily scrum needed for Sprint 1.
 - working on unit test cases for the backend code
 - No Impediments
 - Due date of deliverable 1
+
+*********************************************************************************************************************************************
+Scrums for Sprint 2
+
+3/1/24
+-researched about the player attribute page requirements
+-will work on the design architecture of the project online gaming matchmaking
+-No impediments
+
+3/4/24
+-prepared the high level design architecture of the project
+-Will work on some research about the backend development of the project
+-No impediments
+
+3/6/24
+-scheduled team meeting
+-In team we Will work on discuss & finalize the requirements for the feature of sprint 2/deliverable 2
+-In team we Will work on creating the stories for sprint 2
+-No impediments
+
+3/11/24
+-our team meeting went well
+-finalized the requirements for the feature store player attributes
+-I described and explained the high level architecture diagram of our project to our team and we planned which feature to deliver in 
+ sprint 2 and which feature to deliver in future sprints
+-created stories for sprint 2 and assigned the stories in our team
+-will work on my stories
+-No impediments
+
+3/13/24
+-scheduled team meeting for tomorrow to make sure everything is going well and is there any team member need help
+-discussed with team member melanie about the backend and front end connection 
+-started development of the feature "store player's attribute"
+-will continue working on development part
+-No impediments
+
+3/14/24
+-team meeting went well we discussed about how much work done and how much is pending
+-Continue to work on development story
+-No impediments
+
+3/19/24
+-completed the development work of the feature
+-completed the Junit test cases for the feature all the test cases are passed
+-pushed the code to the github
+-commented on my jira stories
+-scheduled team meeting for tomorrow
+-No impediments
