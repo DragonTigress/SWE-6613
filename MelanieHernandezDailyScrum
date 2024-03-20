@@ -73,3 +73,8 @@ Started on the API calls. It now gets to the email parameter with an error but g
 Also had to add backend database on my pc along with the spring boot to allow for the backend application to be running while trying the front end API call.
 -Continue to work on the API call so that I can add it to the other pages for those fields as well
 -Not being able to get the API call without the bugs. It still isn't putting the information in the backend but is almost there
+
+3/19/24
+-Was able to add page changes with the button clicking, did get a response from the login page before it goes to next page
+-Create video of project for deadline
+-Didn't get as far as expected. Will polish up the code during Sprint 3. The functionality is there but needs more tweaking
