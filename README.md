@@ -14,3 +14,8 @@ Link for Sprint 1 backend video: https://kennesawedu-my.sharepoint.com/personal/
 Link for Sprint 1 frontend video: https://kennesawedu-my.sharepoint.com/personal/mhern147_students_kennesaw_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fmhern147%5Fstudents%5Fkennesaw%5Fedu%2FDocuments%2FSprint1Frontend%2Ewebm&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
 
 Link for Sprint 1 deliverable: https://kennesawedu-my.sharepoint.com/:w:/g/personal/apatil5_students_kennesaw_edu/Ee7sIcl6Cy5BvS6m1XeRtLkBoinOUTG3TDvUrBU8nQTm9Q?e=VwvMKW&wdOrigin=TEAMS-MAGLEV.teams_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1708479381842&web=1
+
+
+***** This is for Sprint 2 *****
+
+Link for Sprint 2 deliverable: https://kennesawedu-my.sharepoint.com/:w:/r/personal/apatil5_students_kennesaw_edu/_layouts/15/Doc.aspx?sourcedoc=%7BBB2592E0-1E41-408F-89AE-1454AA7BB166%7D&file=Web%20Service%20Engineering%20SWE%206813%20Deliverable%202.docx&fromShare=true&action=default&mobileredirect=true
