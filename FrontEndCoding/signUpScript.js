@@ -22,7 +22,7 @@ var isValidEmail;
 var isValidPassword;
 var isValidConfirmPassword;
 
-const submitBtn = document.getElementById("submit-btn")
+const submitBtn = document.getElementById("submit-btn");
 
 
 const requirements = [
