@@ -19,3 +19,5 @@ Link for Sprint 1 deliverable: https://kennesawedu-my.sharepoint.com/:w:/g/perso
 ***** This is for Sprint 2 *****
 
 Link for Sprint 2 deliverable: https://kennesawedu-my.sharepoint.com/:w:/r/personal/apatil5_students_kennesaw_edu/_layouts/15/Doc.aspx?sourcedoc=%7BBB2592E0-1E41-408F-89AE-1454AA7BB166%7D&file=Web%20Service%20Engineering%20SWE%206813%20Deliverable%202.docx&fromShare=true&action=default&mobileredirect=true
+
+Link for Sprint 2 demonstration video: https://kennesawedu-my.sharepoint.com/personal/mhern147_students_kennesaw_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fmhern147%5Fstudents%5Fkennesaw%5Fedu%2FDocuments%2FSprint%202%2DDemonstration%2Ewebm&nav=%7B%22defaultNavPanel%22%3A%7B%22pluginName%22%3A%22MediaSettingsLayer%22%7D%7D&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
