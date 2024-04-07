@@ -136,8 +136,45 @@ submitBtn.addEventListener('click', async _ => {
                 "Content-Type": "application/json; charset=ascii"
             }
     });
-        console.log('Completed!', response);
+        if (response = "User Registration Successful") {
+            //would go to next webpage        
+            window.location.href = "/FrontEndCoding/homepage.html?emailVar=" + encodeURI(emailInput.value);
+        } else {
+            //show the error message below submit?
+            document.getElementById('submit-msg').innerHTML='The email already exists';
+        }
     } catch (err) {
         console.error(`Error: ${err}`);
     }
 })
+
+// function sendUserData () {
+//     fetch('http://localhost:8081/register?firstName=' + encodeURI(firstNameInput.value) 
+//             + '&lastName=' + encodeURI(lastNameInput.value) 
+//             + '&contactNumber=' + encodeURI(phoneInput.value) 
+//             + '&emailAddress=' + encodeURI(emailInput.value) 
+//             + '&password=' + encodeURI(passwordInput.value) 
+//             + '&confirmPassword=' + encodeURI(confirmPasswordInput.value), {
+//                 method: "POST",
+//                 mode: "no-cors",
+//                 credentials: "include",
+//                 headers: {
+//                     "Content-Type": "application/json; charset=ascii"
+//                 }}
+//     )
+//         .then((response) => {
+//             if (!response.ok) {
+//                 throw new Error("Network response was not ok");
+//             }
+//             var res = respons.json();
+//             return res;
+//         })
+// }
+
+// submitBtn.addEventListener('click', sendUserData(res) {
+//     if (res = "Data saved") {
+//         //need to transfer email to next page
+//     } else {
+//         // We let a message saying the email already exists 
+//     }
+// })
