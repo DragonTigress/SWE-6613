@@ -32,12 +32,14 @@ public class RegistrationServiceTest {
 		String firstName = "TestFirstName";
 		String lastName = "TestLastName";
 		String contactNumber = "1234567890";
+		String age = "21";
+		String gender = "Male";
 		String emailAddress = "abc@gmail.com";
 		String password = "123456";
 		String confirmPassword = "123456";
-		Registration registeredUser = new Registration("TestFirstName", "TestLastName", "1234567890", "abc@gmail.com", "123456");
+		Registration registeredUser = new Registration("TestFirstName", "TestLastName", "21", "Male", "1234567890", "abc@gmail.com", "123456");
 		when(registrationRepository.readRegistrationRecordsByEmailAddress(emailAddress)).thenReturn(registeredUser);
-		String response = registrationService.register(firstName, lastName, contactNumber, emailAddress, password, confirmPassword);
+		String response = registrationService.register(firstName, lastName, contactNumber, age, gender, emailAddress, password, confirmPassword);
 		assertTrue(response.contains("This user is already registered"));
 		
 	}
@@ -49,11 +51,13 @@ public class RegistrationServiceTest {
 		String firstName = "TestFirstName";
 		String lastName = "TestLastName";
 		String contactNumber = "12345678";
+		String age = "21";
+		String gender = "Male";
 		String emailAddress = "abcgmail.com";
 		String password = "123456";
 		String confirmPassword = "123456";
 		when(registrationRepository.readRegistrationRecordsByEmailAddress(emailAddress)).thenReturn(null);
-		String response = registrationService.register(firstName, lastName, contactNumber, emailAddress, password, confirmPassword);
+		String response = registrationService.register(firstName, lastName, contactNumber, age, gender,  emailAddress, password, confirmPassword);
 		assertTrue(response.contains("Invalid Email Address"));
 		
 	}
@@ -65,11 +69,13 @@ public class RegistrationServiceTest {
 		String firstName = "TestFirstName";
 		String lastName = "TestLastName";
 		String contactNumber = "1234567890";
+		String age = "21";
+		String gender = "Male";
 		String emailAddress = "abc@gmail.com";
 		String password = "123456";
 		String confirmPassword = "123455";
 		when(registrationRepository.readRegistrationRecordsByEmailAddress(emailAddress)).thenReturn(null);
-		String response = registrationService.register(firstName, lastName, contactNumber, emailAddress, password, confirmPassword);
+		String response = registrationService.register(firstName, lastName, contactNumber, age, gender,  emailAddress, password, confirmPassword);
 		assertTrue(response.contains("password & confirm password doesn't match"));
 		
 	}
@@ -81,11 +87,13 @@ public class RegistrationServiceTest {
 		String firstName = "TestFirstName";
 		String lastName = "TestLastName";
 		String contactNumber = "1234567890";
+		String age = "21";
+		String gender = "Male";
 		String emailAddress = "abc@gmail.com";
 		String password = "123456";
 		String confirmPassword = "123456";
 		when(registrationRepository.readRegistrationRecordsByEmailAddress(contactNumber)).thenReturn(null);
-		String response = registrationService.register(firstName, lastName, contactNumber, emailAddress, password, confirmPassword);
+		String response = registrationService.register(firstName, lastName, contactNumber, age, gender,  emailAddress, password, confirmPassword);
 		assertTrue(response.contains("User Registration successful"));
 		
 	}

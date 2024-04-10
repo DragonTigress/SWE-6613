@@ -18,11 +18,13 @@ public class RegistrationController {
 		@RequestParam("firstName") String firstName,
 		@RequestParam("lastName") String lastName,
 		@RequestParam("contactNumber") String contactNumber,
+		@RequestParam("age") String age,
+		@RequestParam("gender") String gender,
 		@RequestParam("emailAddress") String emailAddress,
 		@RequestParam("password") String password,
 		@RequestParam("confirmPassword") String confirmPassword) {
 		
-		String response = registrationService.register(firstName, lastName, contactNumber, emailAddress, password, confirmPassword);
+		String response = registrationService.register(firstName, lastName, contactNumber, age, gender, emailAddress, password, confirmPassword);
 		
 		return response;
 	

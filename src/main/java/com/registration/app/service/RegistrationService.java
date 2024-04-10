@@ -13,7 +13,7 @@ public class RegistrationService {
 	@Autowired
 	RegistrationRepository registrationRepository;
 
-	public String register(String firstName, String lastName, String contactNumber, String emailAddress, String password,
+	public String register(String firstName, String lastName, String contactNumber, String age, String gender, String emailAddress, String password,
 			String confirmPassword) {
 		
 		
@@ -29,7 +29,7 @@ public class RegistrationService {
 				return "password & confirm password doesn't match";
 			}
 			
-			Registration registration = new Registration(firstName, lastName, contactNumber, emailAddress, password);
+			Registration registration = new Registration(firstName, lastName, contactNumber, age, gender, emailAddress, password);
 			registrationRepository.save(registration);		
 			
 		}else {
