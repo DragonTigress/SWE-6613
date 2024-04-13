@@ -55,12 +55,12 @@ if (document.getElementById('pc').checked) {
 const submitBtn = document.getElementById("submit-btn");
 submitBtn.addEventListener('click', async _ => {
   try {
-      const response = await fetch('http://localhost:8081/storeAttributes?timeZone=' + timeZone.value 
-      + '&microPhone=' + microPhone.value
-      + '&ageRange=' + ageRange.value
-      + '&gender=' + genderType.value
-      + '&consolePreference=' + consolePreference.values
-      + '&emailAddress=' + emailUser.valueOf , {
+      const response = await fetch('http://localhost:8081/storeAttributes?timeZone=' + (timeZone.value) 
+      + '&microPhone=' + (microPhone.value)
+      + '&ageRange=' + (ageRange.value)
+      + '&gender=' + (genderType.value)
+      + '&consolePreference=' + (consolePreference.values)
+      + '&emailAddress=' + (emailUser.valueOf) , {
           method: "POST",
           mode: "no-cors",
           credentials: "include",
