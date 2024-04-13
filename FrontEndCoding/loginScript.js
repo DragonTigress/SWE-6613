@@ -3,6 +3,7 @@ const emailInput = document.querySelector(".email-field input");
 const passwordInput = document.querySelector(".pass-field input");
 
 
+document.cookie = encodeURI(emailInput.value)
 
 loginBtn.addEventListener('click', async _ => {
     try {

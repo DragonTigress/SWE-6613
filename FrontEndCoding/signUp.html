@@ -1,18 +1,19 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en"> 
+  
 <head> 
        <meta charset="utf-8">
        <title>Registration Form</title>
        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover"> 
        <link rel="stylesheet" href="styles.css"> 
-       <script src="signUp.html" defer></script>
+       <script src="script.js" defer></script>
 </head> 
   
 <body> 
     <div class="main"> 
-        <h1>Sign Up</h1> 
-        <form action="/FrontEndCoding/homepage.html" id="sign-up" method="post"> 
+        <h1>Online Game Matchmaking</h1> 
+        <form action="/FrontEndCoding/homepage.html" id="sign-up"> 
               <div class="first-field">
                      <label for="first">First Name:</label> 
                      <input type="text" id="first" name="first" placeholder="Enter your first name" required>
@@ -32,14 +33,14 @@
               </div>
   
             <label for="dob">Date of Birth:</label> 
-            <input type="date" id="dob" name="dob" placeholder="Enter your DOB" required> 
-
+            <input type="date" 
+                   id="dob" name="dob" 
+                   placeholder="Enter your DOB" required> 
               <div class="pass-field">
                      <label for="password">Password:</label> 
                      <input type="password" id="password" name="password" placeholder="Create your password" required>
                      <i class="fa-solid fa-eye"></i> 
               </div>
-
               <div class="content">
                      <p>Password must contain:</p>
                      <ul class="requirement-list">
@@ -70,17 +71,17 @@
                      <input type="password" id="confirmPass" name="repassword" placeholder="Re-Enter your password" required> 
                      <div id="error-msg"></div>
               </div>
-              
               <div class="phone-field">
                      <label for="mobile">Contact:</label> 
                      <input type="text" id="mobile" name="mobile" placeholder="Enter your Phone Number" required maxlength="10">
                      <div id="phone-msg"></div>
               </div>
 
-            <div class="wrap">
-                <button id="submit-btn" type="submit">Submit</button> 
-                <div id="submit-msg"></div> 
-            </div> 
+              <div class="wrap"> 
+                     <a href="/FrontEndCoding/homepage.html">
+                            <button id="submit-btn" type="submit" >Submit</button> 
+                     </a>
+              </div> 
         </form> 
     </div>
     <script type="text/javascript" src="signUpScript.js"></script> 

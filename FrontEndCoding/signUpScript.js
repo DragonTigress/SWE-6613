@@ -15,12 +15,12 @@ const nameRegex = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
 const firstNameInput = document.querySelector(".first-field input");
 const lastNameInput = document.querySelector(".last-field input");
 
-var isValidFirstName;
-var isValidLastName;
-var isValidPhone;
-var isValidEmail;
-var isValidPassword;
-var isValidConfirmPassword;
+// var isValidFirstName;
+// var isValidLastName;
+// var isValidPhone;
+// var isValidEmail;
+// var isValidPassword;
+// var isValidConfirmPassword;
 
 const submitBtn = document.getElementById("submit-btn");
 
@@ -64,8 +64,8 @@ confirmPasswordInput.addEventListener("keyup", function() {
         document.getElementById('error-msg').innerHTML='Passwords don\'t match, re-enter passwords';
     } else {
         document.getElementById('error-msg').innerHTML='';
-        isValidPassword = passwordInput;
-        isValidConfirmPassword = confirmPasswordInput;
+        // isValidPassword = passwordInput;
+        // isValidConfirmPassword = confirmPasswordInput;
     }
 })
 
@@ -75,7 +75,7 @@ emailInput.addEventListener("keyup", function() {
 
     if(isValid){
         document.getElementById('email-msg').innerHTML='';
-        isValidEmail = emailInput;
+        // isValidEmail = emailInput;
 
     } else {
         document.getElementById('email-msg').innerHTML='Email not valid, enter a valid email';
@@ -88,7 +88,7 @@ phoneInput.addEventListener("keyup", function() {
 
     if(isValid){
         document.getElementById('phone-msg').innerHTML='';
-        isValidPhone = phoneInput;
+        // isValidPhone = phoneInput;
 
     } else {
         document.getElementById('phone-msg').innerHTML='Phone number not valid, enter a valid phone number';
@@ -101,7 +101,7 @@ firstNameInput.addEventListener("keyup", function() {
 
     if(isValid){
         document.getElementById('first-msg').innerHTML='';
-        isValidFirstName = firstNameInput;
+        // isValidFirstName = firstNameInput;
 
     } else {
         document.getElementById('first-msg').innerHTML='Your name doesn\'t match correct pattern, enter a valid name';
@@ -114,13 +114,14 @@ lastNameInput.addEventListener("keyup", function() {
 
     if(isValid){
         document.getElementById('last-msg').innerHTML='';
-         isValidLastName = lastNameInput;
+        //  isValidLastName = lastNameInput;
 
     } else {
         document.getElementById('last-msg').innerHTML='Your name doesn\'t match correct pattern, enter a valid name';
     }
 })
 
+document.cookie = encodeURI(emailInput.value)
 submitBtn.addEventListener('click', async _ => {
     try {
         const response = await fetch('http://localhost:8081/register?firstName=' + encodeURI(firstNameInput.value) 
@@ -136,6 +137,7 @@ submitBtn.addEventListener('click', async _ => {
                 "Content-Type": "application/json; charset=ascii"
             }
     });
+        //Can't get it to read the response, skipping past this problem will come back if I have time.
         if (response = "User Registration Successful") {
             //would go to next webpage        
             window.location.href = "/FrontEndCoding/homepage.html?emailVar=" + encodeURI(emailInput.value);
