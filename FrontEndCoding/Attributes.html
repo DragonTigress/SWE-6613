@@ -6,16 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MatchMaking Attributes</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="attributesScript.js" defer></script>
+    <script type="text/javascript" src="attributesScript.js" defer></script>
   </head>
   <title>Matchmaking Attributes</title>
   <header>
      <body>
         <h1> Preferences Attributes </h1>
         <ul>
-            <li><a href="/FrontEndCoding/homepage.html">Home</a></li>
+          <!-- not sure why this link isn't working, something seems to be blocking it? -->
+          <li><a href="/FrontEndCoding/homepage.html">Home</a></li>
         </ul>
     <div class = "form-group">
+        <!-- Have to have this in form action to allow for button links to work -->
+        <!-- <form action="/FrontEndCoding/homepage.html">  -->
         <form>
             <label for="timezone">Time Zone</label>
             <select id="timezone">
@@ -79,13 +82,13 @@
       <!-- Add more console options as needed -->
     </div>
     <br>
-    <a href="/FrontEndCoding/homepage.html">
-      <button id="submit-btn" type="submit" class="btn"> Submit</button>
-    </a>
+    <!-- <a href="/FrontEndCoding/homepage.html"> -->
+      <button id="submit-btn" type="submit" class="btn">Submit</button>
+    <!-- </a>  -->
       </form>
     </div>
 
-    <script type="text/javascript" src="attributesScript.js"></script>
+    <!-- <script type="text/javascript" src="attributesScript.js"></script> -->
   </body>
 </header>
  

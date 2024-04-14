@@ -121,7 +121,7 @@ lastNameInput.addEventListener("keyup", function() {
     }
 })
 
-document.cookie = encodeURI(emailInput.value)
+document.cookie = emailInput.value;
 submitBtn.addEventListener('click', async _ => {
     try {
         const response = await fetch('http://localhost:8081/register?firstName=' + encodeURI(firstNameInput.value) 
@@ -140,7 +140,7 @@ submitBtn.addEventListener('click', async _ => {
         //Can't get it to read the response, skipping past this problem will come back if I have time.
         if (response = "User Registration Successful") {
             //would go to next webpage        
-            window.location.href = "/FrontEndCoding/homepage.html?emailVar=" + encodeURI(emailInput.value);
+            window.location.href = "/FrontEndCoding/homepage.html";
         } else {
             //show the error message below submit?
             document.getElementById('submit-msg').innerHTML='The email already exists';
