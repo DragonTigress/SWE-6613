@@ -20,43 +20,6 @@ const optionsContainer = document.querySelector(".options-container");
 //   });
 // });
 
-// if (document.getElementById('microphone-yes').checked) {
-//    const microPhone = "yes";
-// } else if (document.getElementById('microphone-no').checked) {
-//    const microPhone = "no";
-// }
-
-// if (document.getElementById('male').checked) {
-//   genderType = "male";
-// } else if (document.getElementById('female').checked) {
-//   genderType = "female";
-// } else if (document.getElementById('other').checked) {
-//   genderType = "other";
-// }
-
-// if (document.getElementById('ps4').checked) {
-//   consolePreference.push('ps4');
-// }
-
-// if (document.getElementById('xbox').checked) {
-//   consolePreference.push('xBox');
-// }
-
-// if (document.getElementById('switch').checked) {
-//   consolePreference.push('nintendoSwitch');
-// }
-
-// if (document.getElementById('pc').checked) {
-//   consolePreference.push('pc');
-// }
-
-// console.log(timeZone.value);
-// console.log(microPhone);
-// console.log(ageRange.value);
-// console.log(genderType);
-// console.log(consolePreference.values);
-// console.log(emailUser.valueOf);
-
 submitBtn.addEventListener('click', async _ => {
   if (document.getElementById('microphone-yes').checked) {
     microPhone = "yes";
