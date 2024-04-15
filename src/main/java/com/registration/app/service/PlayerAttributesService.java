@@ -144,7 +144,7 @@ public class PlayerAttributesService {
 			if(!attribute.getEmailAddress().equals(playerAttribute.getEmailAddress())) {
 				
 				Registration playerRecord = registrationRepository.readRegistrationRecordsByEmailAddress(attribute.getEmailAddress());
-				System.out.println("player record found in reg table");
+			
 				Profile profile = new Profile();
 				String[] ageRangeArray = attribute.getAgeRange().split("-"); 
 			
