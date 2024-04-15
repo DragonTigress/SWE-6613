@@ -109,3 +109,50 @@ Scrums for Sprint 2
 -commented on my jira stories
 -scheduled team meeting for tomorrow
 -No impediments
+
+*********************************************************************************************************************************************
+Scrums for Sprint 3
+
+3/25/24
+-researched about the find matches page requirements
+-No impediments
+
+4/1/24
+-scheduled team meeting
+-In team we Will work on discuss & finalize the requirements for the feature of sprint 3/deliverable 3
+-In team we Will work on creating the stories for sprint 3
+-No impediments
+
+4/3/24
+-our team meeting went well
+-we finalized the requirements for the feature find matches
+-created stories for sprint 3 and assigned the stories in our team
+-will work on my stories
+-No impediments
+
+4/4/24
+-started development of the feature "find matches"
+-will continue working on development part
+-No impediments
+
+4/5/24
+-continue working on the find matches development story
+-I had to add "age" and "gender" fields at the time of player registration because it is needed for me to write a logic for find match page in backend
+
+4/9/24
+-completed development of the feature "find matches"
+-uploaded the find matches development code to the git hub
+-will start working on the unit test case story for find matches feature
+-No impediments
+
+4/12/24
+-completed unit test cases story for the feature "find matches"
+-uploaded the unit test cases for find matches feature's development code to the git hub
+-will start working on the documentation for sprint 3 deliverable
+-No impediments
+
+4/15/24
+-working on documentation for sprint 3
+-commented on my jira stories
+-scheduled team meeting for sprint review
+-No impediments
