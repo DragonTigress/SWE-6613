@@ -78,3 +78,32 @@ Also had to add backend database on my pc along with the spring boot to allow fo
 -Was able to add page changes with the button clicking, did get a response from the login page before it goes to next page
 -Create video of project for deadline
 -Didn't get as far as expected. Will polish up the code during Sprint 3. The functionality is there but needs more tweaking
+
+*********************************************************************************************************************************************
+Scrums for Sprint 3
+
+3/28/24
+-Trying to read the responses from the POST request with the registration page but have no success
+-Will try to read responses but if I can't get it to work, then will have change page events with how it is supposed to work
+-No impediments
+
+4/3/24
+-Had to revert back to old web pages, was getting errors that I didn't have before when clicking submit button and moving from page to page
+-Work on the POST request for the attributes page
+-No impediments
+
+4/8/24
+-Working on errors that are occuring from one page to another
+-Get the POST request to work properly with the correct parameters and input data into the backend database
+-Won't have time for the GET request to display on matchmaking session page
+
+4/11/24
+-Was able to successfully go from page to page with button clicking. Someone have POST request to work but some variables are reading as undefined
+-Fix the undefined variables to work properly with the POST request
+-Won't have time for the GET request to display on matchmaking session page
+
+4/15/24
+-Got the POST request to work with the matchmaking attributes and enter data into the database
+-Will record front end video demonstration for Sprint 3
+-Wasn't able to create GET request to display profiles for matchmaking session
+
