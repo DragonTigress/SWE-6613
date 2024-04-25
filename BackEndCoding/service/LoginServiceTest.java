@@ -69,7 +69,7 @@ public class LoginServiceTest {
 		String emailAddress = "abc@gmail.com";
 		String password = "123456";
 		
-		Registration registeredUser = new Registration("testUser", "testPwd", "12345678", "abc@gmail.com", "testPwd");
+		Registration registeredUser = new Registration("testUser", "testPwd", "12345678", "21", "Male",  "abc@gmail.com", "testPwd");
 		when(registrationRepository.readRegistrationRecordsByEmailAddress(emailAddress)).thenReturn(registeredUser);
 		String response = loginService.login(emailAddress, password);
 		assertEquals(response, "Invalid Credentials");		
@@ -82,7 +82,7 @@ public class LoginServiceTest {
 		String emailAddress = "abc@gmail.com";
 		String password = "123456";
 		
-		Registration registeredUser = new Registration("testUser", "testPwd", "1234567890", "abc@gmail.com", "123456");
+		Registration registeredUser = new Registration("testUser", "testPwd", "1234567890", "21", "Male",  "abc@gmail.com", "123456");
 		when(registrationRepository.readRegistrationRecordsByEmailAddress(emailAddress)).thenReturn(registeredUser);
 		String response = loginService.login(emailAddress, password);
 		assertEquals(response, "Login Successful");	

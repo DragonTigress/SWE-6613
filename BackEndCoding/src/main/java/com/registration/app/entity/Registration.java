@@ -24,6 +24,12 @@ public class Registration {
 	private String contactNumber;
 	
 	@Column
+	private String age;
+	
+	@Column
+	private String gender;
+	
+	@Column
 	private String emailAddress;
 	
 	@Column
@@ -35,11 +41,13 @@ public class Registration {
 	}
 
 
-	public Registration(String firstName, String lastName, String contactNumber, String emailAddress, String password) {
+	public Registration(String firstName, String lastName, String contactNumber, String age, String gender, String emailAddress, String password) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.contactNumber = contactNumber;
+		this.age = age;
+		this.gender = gender;
 		this.emailAddress = emailAddress;
 		this.password = password;
 	}
@@ -85,6 +93,26 @@ public class Registration {
 	}
 
 
+	public String getAge() {
+		return age;
+	}
+
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+	
+
+	public String getGender() {
+		return gender;
+	}
+
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	
 	public String getEmailAddress() {
 		return emailAddress;
 	}
