@@ -14,6 +14,8 @@ const phoneRegex = /^[0-9]{10}$/;
 const nameRegex = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
 const firstNameInput = document.querySelector(".first-field input");
 const lastNameInput = document.querySelector(".last-field input");
+const ageRange = document.getElementById("age-range");
+const genderType = document.getElementById("gender-type");
 
 // var isValidFirstName;
 // var isValidLastName;
@@ -129,7 +131,9 @@ submitBtn.addEventListener('click', async _ => {
         + '&contactNumber=' + encodeURI(phoneInput.value) 
         + '&emailAddress=' + encodeURI(emailInput.value) 
         + '&password=' + encodeURI(passwordInput.value) 
-        + '&confirmPassword=' + encodeURI(confirmPasswordInput.value), {
+        + '&confirmPassword=' + encodeURI(confirmPasswordInput.value)
+        + '&age=' + encodeURI(ageRange.value)
+        + '&gender=' + encodeURI(genderType.value), {
             method: "POST",
             mode: "no-cors",
             credentials: "include",
